@@ -65,6 +65,8 @@ public class MTCaptchaUtil implements Closeable
 	/**
 	 * Checks if the MTCaptcha verifiedtoken is valid
 	 * 
+	 * @param verificationToken The verifiedtoken string 
+	 * 
 	 * @return true if valid, false if not. 
 	 * Note, will also return false on error like bad privatekey, or server server connectivity issues
 	 */
@@ -76,7 +78,9 @@ public class MTCaptchaUtil implements Closeable
 	/**
 	 * Checks if the MTCaptcha verifiedtoken is valid and return the full tokeninfo as an object
 	 * 
-	 * @returns Always returns a MTCaptchaTokenInfo object.
+     * @param verificationToken The verifiedtoken string 
+	 * 
+	 * @return Always returns a MTCaptchaTokenInfo object.
 	 *		MTCaptchaTokenInfo.success will indicate success of check
 	 *		MTCaptchaTokenInfo_unexepctedException will hold any error during check such as connectivity issue. 
 	 *
